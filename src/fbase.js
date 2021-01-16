@@ -1,15 +1,7 @@
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
-
-// const firebaseConfig = {
-//   apiKey: "AIzaSyD4PhquD0B3L0tpDk1CEYPq77Uew2sqeWw",
-//   authDomain: "nwitter-c3b00.firebaseapp.com",
-//   projectId: "nwitter-c3b00",
-//   storageBucket: "nwitter-c3b00.appspot.com",
-//   messagingSenderId: "128774256035",
-//   appId: "1:128774256035:web:901aaa911d86e2e6635616",
-// };
+import "firebase/storage";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -26,3 +18,4 @@ export const firebaseInstance = firebase;
 
 export const authService = firebase.auth();
 export const dbService = firebase.firestore();
+export const storageService = firebase.storage();
